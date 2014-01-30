@@ -1,7 +1,7 @@
 JBoss BOMs
 ==========
 
-The JBoss BOM's project provides Maven BOM files enhancing Jave EE 6 with deployment and test tooling. These files manage the version of the dependencies you use in your project, ensuring you always get a compatible stack.
+The JBoss BOM's project provides Maven BOM files enhancing Jave EE 7 with deployment and test tooling. These files manage the version of the dependencies you use in your project, ensuring you always get a compatible stack.
 
 Usage
 -----
@@ -11,9 +11,9 @@ To use the BOM, import into your dependency management. For example, if you want
     <dependencyManagement>    
         <dependencies>
             <dependency>
-                <groupId>org.jboss.bom.eap</groupId>
-                <artifactId>jboss-javaee-web-6.0-with-tools</artifactId>
-                <version>6.2.0-build-SNAPSHOT</version>
+                <groupId>org.wildfly.bom</groupId>
+                <artifactId>jboss-javaee-7.0-with-tools</artifactId>
+                <version>8.0.0-SNAPSHOT</version>
                 <scope>import</scope>
             </dependency>
         </dependencies>
