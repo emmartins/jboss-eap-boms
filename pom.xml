@@ -2,16 +2,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-    <modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>    
 
     <groupId>org.jboss.bom</groupId>
-    <artifactId>jboss-eap-javaee7</artifactId>
-    <version>7.2.0-SNAPSHOT</version>
+    <artifactId>jboss-eap</artifactId>
+    <version>7.2.0.CD13-redhat-SNAPSHOT</version>
 
     <packaging>pom</packaging>
 
-    <name>JBoss EAP Java EE 7 Dependency Management</name>
-    <description>JBoss EAP Java EE 7 Dependency Management</description>
+    <name>JBoss EAP BOM</name>
+    <description>Dependency Management BOM</description>
 
     <url>http://www.jboss.org</url>
     <issueManagement>
@@ -45,55 +45,325 @@
     <properties>
 
         <!-- Versions of JBoss projects -->
-        <version.org.jboss.eap>7.2.0.CD12-redhat-3</version.org.jboss.eap>
-        <version.org.infinispan>9.1.7.Final-redhat-1</version.org.infinispan>
+        <version.org.jboss.eap>7.2.0.CD13-redhat-SNAPSHOT</version.org.jboss.eap>
+        <version.io.undertow>2.0.9.Final-redhat-1</version.io.undertow>
+        <version.io.undertow.js>1.0.2.Final-redhat-1</version.io.undertow.js>
+        <version.org.apache.httpcomponents.httpclient>4.5.2.redhat-2</version.org.apache.httpcomponents.httpclient>
+        <version.org.apache.commons.commons-lang3>3.6.0.redhat-1</version.org.apache.commons.commons-lang3>
+        <version.org.apache.cxf>3.2.4.redhat-1</version.org.apache.cxf>
+        <version.org.jboss.ws.cxf>5.2.1.Final-redhat-1</version.org.jboss.ws.cxf>
+        <version.org.infinispan>9.2.5.Final-redhat-1</version.org.infinispan>
         <version.org.jboss.arquillian>1.1.13.Final</version.org.jboss.arquillian>
-        <version.org.jboss.arquillian.extension.drone>2.0.1.Final</version.org.jboss.arquillian.extension.drone>
-        <version.org.jboss.arquillian.graphene>2.1.0.Final</version.org.jboss.arquillian.graphene>
-        <version.org.wildfly.arquillian.container>2.0.1.Final</version.org.wildfly.arquillian.container>
-        <version.org.jboss.narayana>5.5.31.Final-redhat-1</version.org.jboss.narayana>
+        <version.org.jboss.arquillian.extension.drone>2.3.1</version.org.jboss.arquillian.extension.drone>
+        <version.org.jboss.arquillian.graphene>2.3.1</version.org.jboss.arquillian.graphene>
+
         <version.org.jboss.ejb3.ext-api>2.2.0.Final-redhat-1</version.org.jboss.ejb3.ext-api>
+        <version.org.jboss.jboss-dmr>1.5.0.Final-redhat-1</version.org.jboss.jboss-dmr>
         <version.org.jboss.logging.jboss-logging>3.3.1.Final-redhat-1</version.org.jboss.logging.jboss-logging>
-        <version.org.jboss.logging.processor>2.0.1.Final-redhat-1</version.org.jboss.logging.processor>
-        <version.org.jboss.resteasy>3.5.0.Final-redhat-1</version.org.jboss.resteasy>
+        <version.org.jboss.logging.jboss-logging-tools>2.1.0.Final</version.org.jboss.logging.jboss-logging-tools>
+        <version.org.jboss.narayana>5.8.1.Final-redhat-1</version.org.jboss.narayana>
+        <version.org.jboss.resteasy>3.5.1.Final-redhat-1</version.org.jboss.resteasy>
         <version.org.jboss.security.jboss-negotiation>3.0.4.Final-redhat-1</version.org.jboss.security.jboss-negotiation>
         <version.org.jboss.security.jbossxacml>2.0.8.Final-redhat-8</version.org.jboss.security.jbossxacml>
-        <version.org.jboss.spec.jboss.javaee7>1.1.1.Final-redhat-1</version.org.jboss.spec.jboss.javaee7>
+        <version.org.jboss.spec.jboss.javaee7>1.1.0.Final-redhat-3</version.org.jboss.spec.jboss.javaee7>
         <version.org.jboss.shrinkwrap.resolver>2.2.6</version.org.jboss.shrinkwrap.resolver>
-        <version.org.jboss.ws.cxf>5.2.0.Final-redhat-1</version.org.jboss.ws.cxf>
         <version.org.picketbox.picketbox-commons>1.0.0.final-redhat-5</version.org.picketbox.picketbox-commons>
-        <version.org.picketlink>2.5.5.SP9-redhat-1</version.org.picketlink>
-        <version.org.glassfish.jaxb>2.3.0.redhat-1</version.org.glassfish.jaxb>
-        <version.org.wildfly.security.elytron>1.2.4.Final-redhat-1</version.org.wildfly.security.elytron>
+        <version.org.picketlink>2.5.5.SP11-redhat-1</version.org.picketlink>
+        <version.org.wildfly.arquillian>2.1.0.Final</version.org.wildfly.arquillian>
+        <version.org.wildfly.security.elytron>1.3.3.Final-redhat-1</version.org.wildfly.security.elytron>
         <version.org.wildfly.client.config>1.0.0.Final-redhat-1</version.org.wildfly.client.config>
-        <version.org.wildfly.common>1.3.0.Final-redhat-1</version.org.wildfly.common>
-        <version.org.wildfly.discovery>1.0.0.Final-redhat-1</version.org.wildfly.discovery>
-
-
-        <!-- Version of Hibernate projects -->
-        <version.org.hibernate>5.1.10.Final-redhat-1</version.org.hibernate>
+        <version.org.wildfly.common>1.4.0.Final-redhat-1</version.org.wildfly.common>
+        <version.org.wildfly.discovery>1.1.1.Final-redhat-1</version.org.wildfly.discovery>
+        <version.org.hibernate>5.1.14.Final-redhat-1</version.org.hibernate>
         <version.org.hibernate.commons-annotations>5.0.2.Final-redhat-2</version.org.hibernate.commons-annotations>
         <version.org.hibernate-jpamodelgen>${version.org.hibernate}</version.org.hibernate-jpamodelgen>
         <version.org.hibernate.validator>5.3.6.Final-redhat-1</version.org.hibernate.validator>
         <version.org.hibernate.search>5.5.8.Final-redhat-1</version.org.hibernate.search>
+        <version.org.jboss.ejb-client>4.0.10.Final-redhat-1</version.org.jboss.ejb-client>
+        <version.org.jboss.ejb-client-legacy>3.0.2.Final-redhat-1</version.org.jboss.ejb-client-legacy>
+        <version.org.wildfly.http-client>1.0.12.Final-redhat-1</version.org.wildfly.http-client>
+        <version.org.wildfly.naming-client>1.0.9.Final-redhat-1</version.org.wildfly.naming-client>
+        <version.org.wildfly.transaction.client>1.1.2.Final-redhat-1</version.org.wildfly.transaction.client>
+        <version.org.jboss.xnio>3.6.3.Final-redhat-1</version.org.jboss.xnio>
+        <version.org.jboss.marshalling.jboss-marshalling>2.0.5.Final-redhat-1</version.org.jboss.marshalling.jboss-marshalling>
+        <version.org.jboss.remoting>5.0.7.Final-redhat-1</version.org.jboss.remoting>
+        <version.org.jboss.threads>2.3.2.Final-redhat-1</version.org.jboss.threads>
+        <version.org.apache.activemq.artemis>1.5.5.012-redhat-1</version.org.apache.activemq.artemis>
+        <version.io.netty>4.1.9.Final-redhat-1</version.io.netty>
+        <version.org.jgroups>4.0.11.Final-redhat-2</version.org.jgroups>
+        <version.com.google.guava>25.0.0.redhat-1</version.com.google.guava>
+        <version.commons-beanutils>1.9.3.redhat-1</version.commons-beanutils>
+        <version.commons-collections>3.2.2.redhat-2</version.commons-collections>
 
         <!-- Versions of projects not directly under JBoss umbrella -->
-        <version.com.sun.xml.messaging.saaj.saaj-impl>1.3.16.SP1-redhat-6</version.com.sun.xml.messaging.saaj.saaj-impl>
-        <version.org.apache.xerces>2.11.0.SP5-redhat-1</version.org.apache.xerces>
-        
         <version.junit>4.12</version.junit>
-        <version.log4j>1.2.17.redhat-3</version.log4j>
-        <version.org.testng>6.9.10</version.org.testng>
-
-        <!-- Versions of Maven plugins, user must setup them by his/her own -->
-        <version.surefire.plugin>2.17</version.surefire.plugin>
-        <version.org.wildfly.plugins.maven.plugin>1.0.2.Final</version.org.wildfly.plugins.maven.plugin>
-
+        <version.org.slf4j>1.7.22.redhat-2</version.org.slf4j>
+        <version.org.testng>6.11</version.org.testng>
     </properties>
+          
+    <modules>
+        <module>client</module>
+        <module>javaee7</module>
+    </modules>
 
     <dependencyManagement>
         <dependencies>
-        <!-- BOM imports -->
+
+            <!-- clients -->
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>jcl-over-slf4j</artifactId>
+                <version>${version.org.slf4j}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>${version.org.slf4j}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-beanutils</groupId>
+                <artifactId>commons-beanutils</artifactId>
+                <version>${version.commons-beanutils}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>commons-logging</artifactId>
+                        <groupId>commons-logging</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+
+            <dependency>
+                <groupId>commons-collections</groupId>
+                <artifactId>commons-collections</artifactId>
+                <version>${version.commons-collections}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${version.com.google.guava}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>jsr305</artifactId>
+                        <groupId>com.google.code.findbugs</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jgroups</groupId>
+                <artifactId>jgroups</artifactId>
+                <version>${version.org.jgroups}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.activemq</groupId>
+                <artifactId>artemis-jms-client</artifactId>
+                <version>${version.org.apache.activemq.artemis}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>geronimo-jms_2.0_spec</artifactId>
+                        <groupId>org.apache.geronimo.specs</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>geronimo-json_1.0_spec</artifactId>
+                        <groupId>org.apache.geronimo.specs</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>johnzon-core</artifactId>
+                        <groupId>org.apache.johnzon</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.activemq</groupId>
+                <artifactId>artemis-selector</artifactId>
+                <version>${version.org.apache.activemq.artemis}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.activemq</groupId>
+                <artifactId>artemis-hqclient-protocol</artifactId>
+                <version>${version.org.apache.activemq.artemis}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>${version.io.netty}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.activemq</groupId>
+                <artifactId>artemis-commons</artifactId>
+                <version>${version.org.apache.activemq.artemis}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>jboss-logmanager</artifactId>
+                        <groupId>org.jboss.logmanager</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>commons-logging</artifactId>
+                        <groupId>commons-logging</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.activemq</groupId>
+                <artifactId>artemis-core-client</artifactId>
+                <version>${version.org.apache.activemq.artemis}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>commons-logging</artifactId>
+                        <groupId>commons-logging</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>geronimo-json_1.0_spec</artifactId>
+                        <groupId>org.apache.geronimo.specs</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>johnzon-core</artifactId>
+                        <groupId>org.apache.johnzon</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jboss</groupId>
+                <artifactId>jboss-ejb-client</artifactId>
+                <version>${version.org.jboss.ejb-client}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>jboss-remoting</artifactId>
+                        <groupId>org.jboss.remoting3</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>jboss-transaction-api_1.1_spec</artifactId>
+                        <groupId>org.jboss.spec.javax.transaction</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jboss</groupId>
+                <artifactId>jboss-ejb-client-legacy</artifactId>
+                <version>${version.org.jboss.ejb-client-legacy}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>jboss-remoting</artifactId>
+                        <groupId>org.jboss.remoting3</groupId>
+                    </exclusion>
+                    <exclusion>
+                        <artifactId>jboss-transaction-api_1.1_spec</artifactId>
+                        <groupId>org.jboss.spec.javax.transaction</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.wildfly.wildfly-http-client</groupId>
+                <artifactId>wildfly-http-client-common</artifactId>
+                <version>${version.org.wildfly.http-client}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.wildfly.wildfly-http-client</groupId>
+                <artifactId>wildfly-http-ejb-client</artifactId>
+                <version>${version.org.wildfly.http-client}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.wildfly.wildfly-http-client</groupId>
+                <artifactId>wildfly-http-naming-client</artifactId>
+                <version>${version.org.wildfly.http-client}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.wildfly.wildfly-http-client</groupId>
+                <artifactId>wildfly-http-transaction-client</artifactId>
+                <version>${version.org.wildfly.http-client}</version>
+
+            </dependency>
+
+            <dependency>
+                <groupId>org.wildfly.transaction</groupId>
+                <artifactId>wildfly-transaction-client</artifactId>
+                <version>${version.org.wildfly.transaction.client}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>*</artifactId>
+                        <groupId>*</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.xnio</groupId>
+                <artifactId>xnio-api</artifactId>
+                <version>${version.org.jboss.xnio}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.xnio</groupId>
+                <artifactId>xnio-nio</artifactId>
+                <version>${version.org.jboss.xnio}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.wildfly</groupId>
+                <artifactId>wildfly-naming-client</artifactId>
+                <version>${version.org.wildfly.naming-client}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>jboss-remoting</artifactId>
+                        <groupId>org.jboss.remoting3</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <dependency>
+                <groupId>org.jboss.marshalling</groupId>
+                <artifactId>jboss-marshalling</artifactId>
+                <version>${version.org.jboss.marshalling.jboss-marshalling}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.marshalling</groupId>
+                <artifactId>jboss-marshalling-river</artifactId>
+                <version>${version.org.jboss.marshalling.jboss-marshalling}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.threads</groupId>
+                <artifactId>jboss-threads</artifactId>
+                <version>${version.org.jboss.threads}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.jboss.remoting</groupId>
+                <artifactId>jboss-remoting</artifactId>
+                <version>${version.org.jboss.remoting}</version>
+            </dependency>
+
+            <!--
+            <dependency>
+                <groupId>org.jboss.eap</groupId>
+                <artifactId>wildfly-clustering-singleton-api</artifactId>
+                <version>${version.org.jboss.eap}</version>
+                <scope>provided</scope>
+            </dependency>
+            -->
+
+            <dependency>
+                <groupId>io.undertow</groupId>
+                <artifactId>undertow-core</artifactId>
+                <version>${version.io.undertow}</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>undertow-build-config</artifactId>
+                        <groupId>io.undertow</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <!-- BOM imports -->
             <!-- JBoss distributes a complete set of Java EE 7 APIs including
                 a Bill of Materials (BOM). A BOM specifies the versions of a "stack" (or
                 a collection) of artifacts. We use this here so that we always get the correct
@@ -108,11 +378,11 @@
                 <scope>import</scope>
             </dependency>
 
-        <!-- Wildfly client dependency sets -->
+            <!-- Wildfly client dependency sets -->
             <!-- The ejb and jms client BOMs should be used as a normal dependency with
                  <type>pom</type>.  This adds a set of dependencies to the build.
-                 This is in contrast to dependency management using the "import" 
-                 scope which manages dependency versions, but does not add the 
+                 This is in contrast to dependency management using the "import"
+                 scope which manages dependency versions, but does not add the
                  dependencies to the build classpath. -->
             <dependency>
                 <groupId>org.jboss.eap</groupId>
@@ -127,7 +397,7 @@
                 <type>pom</type>
             </dependency>
 
-        <!-- Individual EAP Components -->
+            <!-- Individual EAP Components -->
 
             <!-- Note, these jaxb jars are part of the private EAP 7 and should
             not be used directly.  They are included here only because they are
@@ -291,13 +561,13 @@
             <dependency>
                 <groupId>org.jboss.logging</groupId>
                 <artifactId>jboss-logging-processor</artifactId>
-                <version>${version.org.jboss.logging.processor}</version>
+                <version>${version.org.jboss.logging.jboss-logging-tools}</version>
             </dependency>
             <!--  the jboss-logging-tools annotations  -->
             <dependency>
                 <groupId>org.jboss.logging</groupId>
                 <artifactId>jboss-logging-annotations</artifactId>
-                <version>${version.org.jboss.logging.processor}</version>
+                <version>${version.org.jboss.logging.jboss-logging-tools}</version>
             </dependency>
             <!--  jboss-logging API -->
             <dependency>
@@ -411,10 +681,10 @@
                 <artifactId>jbossws-cxf-client</artifactId>
                 <version>${version.org.jboss.ws.cxf}</version>
                 <exclusions>
-                  <exclusion>
-                    <groupId>org.jboss.com.sun.httpserver</groupId>
-                    <artifactId>httpserver</artifactId>
-                  </exclusion>
+                    <exclusion>
+                        <groupId>org.jboss.com.sun.httpserver</groupId>
+                        <artifactId>httpserver</artifactId>
+                    </exclusion>
                 </exclusions>
             </dependency>
 
@@ -505,10 +775,28 @@
         </dependencies>
     </dependencyManagement>
 
-    <modules>
-        <module>jboss-javaee7-with-spring4</module>
-        <module>jboss-javaee7-with-tools</module>
-    </modules>
+    <repositories>
+        <repository>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>jboss-enterprise-maven-repository</id>
+            <url>https://maven.repository.redhat.com/ga/</url>
+        </repository>
+        <repository>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+            <id>jboss-enterprise-maven-repository-ea</id>
+            <url>https://maven.repository.redhat.com/earlyaccess/all/</url>
+        </repository>
+    </repositories>
 
     <distributionManagement>
         <repository>
